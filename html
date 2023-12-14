@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Búsqueda</title>
+</head>
+<form action="/scripts/encuentra.php" method="POST" enctype="multipart/form-data">
+    <table border="1">
+
+<body>
+
+    <tr>
+      <th colspan="2">Formulario de Búsqueda</th>
+    </tr>
+
+    <tr>
+      <td align="right"><label for="buscar"> Buscar (*):</label></td>
+      <td><input type="text" id="buscar" name="buscar" maxlength="9" pattern="[A-Z][0-9]" required></td>
+    </tr>
+    <tr>
+        <button type="Buscar">Buscar</button>
+        <form action="/scipts/buscar.php" method="POST" enctype="multipart/form-data">
+            <table border="1">
+    </tr>
+
+    <tr>
+        <th colspan="2">Cuestionario de satisfacción</th>
+    </tr>
+
+    <tr>
+      <td align="right"><label for="nivel_atención">Atención Recibida:</label></td>
+      <td><input type="range" id="nivel_atención" name="nivel_atención" min="1" max="10" required></td>
+    </tr>
+
+    <tr>
+        <td align="right"><label for="Recomendación Si o No">Recomendación Si o No (*):</label></td>
+        <td><input type="range" id="Recomendación Si o No" name="Recomendación Si o No[]" min="Si" max="No" required></td>
+      </tr>
+
+    <tr>
+        <td align="right"><label for="telefono">Teléfono:</label></td>
+        <td><input type="tel" id="telefono" name="telefono" pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}-[0-9]{2}" placeholder="Ej. 928-XX-XX-XX"></td>
+    </tr>
+
+    <tr>
+      <td align="right"><label for="Comentarios">Comentarios (*):</label></td>
+      <td>
+        <input type="checkbox" id="me han resuelto el problema " name="Comentario[]" value="me han resuelto el problema">
+        <label for="me han resuelto del problema">Me han resuelto el problema</label><br>
+        
+        <input type="checkbox" id="Me han atendido con amabilidad" name="Comentario[]" value="Me han atendido con amabilidad">
+        <label for="Me han atendido con amabilidad">Me han atendido con amabilidad</label><br>
+        
+        <input type="checkbox" id="No he tenido que esperar mucho tiempo" name="Comentario[]" value="No he tenido que esperar mucho tiempo">
+        <label for="No he tenido que esperar mucho tiempo">No he tenido que esperar mucho tiempo</label><br>
+        
+    
+    </td>
+    </tr>
+
+    <tr>
+      <td colspan="2" align="center">
+        <button type="submit">Enviar Formulario</button>
+      </td>
+    </tr>
+  </table>
+  
+  <input type="hidden" name="nombre_apellidos_oculto" value="Tu Nombre y Apellidos">
+</form>
+</body>
+</html>
